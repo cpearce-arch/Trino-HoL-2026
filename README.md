@@ -804,8 +804,8 @@ SELECT
   d.city as destination,
   f.uniquecarrier ,
   COUNT(c.complaint_id) AS complaint_volume
-FROM postgres.airlinedata.customer_complaints c
-JOIN iceberg.cpearce.fct_flights f ON c.uniquecarrier = f.uniquecarrier AND c.flightnum = cast ( f.flightnum as varchar)
+FROM postgresql.airlinedata.customer_complaints c
+JOIN iceberg.cpearce.fct_flights f ON c.uniquecarrier = f.uniquecarrier AND try_cast (c.flightnum as varchar) = try_cast ( f.flightnum as varchar)
 JOIN iceberg.cpearce.dim_airports o ON f.origin = o.iata
 JOIN iceberg.cpearce.dim_airports d ON f.dest = d.iata
 GROUP BY 1,2,3,4
