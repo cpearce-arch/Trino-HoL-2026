@@ -398,11 +398,11 @@ LIMIT 5;
 Results (same as previous query)
 |tailnum	| flights_count | departure_delay_minutes |	 departure_delay_count|
 | :- | :- | :- | :- |
-|N692	| 60 |1355  | 29	|
-|N507US	| 34 |1252	| 15    |
-|N223AA	| 40 |1229	| 17	|
-|N179AW	| 58 |1185	| 24	|
-|N53NW  | 51 |1165	| 22	|
+|N381UA	| 25287 |341368  | 12280	|
+|N375UA	| 25147|341103	| 12162   |
+|N673	| 30616 |333744| 12835	|
+|N366UA	| 24808|331318	| 12113	|
+|N377UA | 25105 |328546	| 12163	|
 
 
 The "Airline Marathon" Common Table Expression (CTE) structure
