@@ -365,10 +365,10 @@ Result: showing all 14 partitions with keys (years)
 
 |partition |      record_count|    file_count   |   total_size|
 | :- |:- |:- |:- |
-|[1995] | 12960 |1      | 150353|
-|[1996] | 38909 |1      | 443193|
-|[1997] | 41657 |1      | 473337|
-|[1998] | 6474  |1      | 76016 |
+|[1995] | 5327435 |6      | 59366637|
+|[1996] | 5351983 |7      | 60370328|
+|[1997] | 5411843 |8      | 60899545|
+|[1998] | 5384721  |9      | 61215523 |
 ...
 
 Uniform File Distribution: You have roughly 5 to 7 files per partition for ~5M to 7M rows. This is a very "healthy" distribution. These files are relatively small (under 100MB), Trino's can pull these files into memory, decompress the columns, and process them in parallel across your worker nodes effortlessly.
